@@ -8,7 +8,7 @@ bash
 install matplotlib sudo apt update sudo apt upgrade.?
 ...
 
-#class
+# 클래스
 class Person:
     def __init__(self, name):
         self.name = name
