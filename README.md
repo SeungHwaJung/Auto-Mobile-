@@ -17,3 +17,11 @@
 ### 과적합(Overfitting): 학습 데이터에만 잘 맞고 새 데이터엔 성능 저하
 ### 검증(Validation): 모델 성능을 일반화하기 위한 데이터 테스트
 ### 정확도/정밀도/재현율: 모델 성능 평가 지표
+
+# OPEN CV?
+## 항목	설명
+### 이름	OpenCV (Open Source Computer Vision Library)
+### 개발 시작	인텔(Intel)이 1999년에 시작
+### 라이선스	BSD 라이선스 (상업적 사용 가능)
+### 주요 언어	C++, Python, Java 등 지원
+### 주요 플랫폼	Windows, macOS, Linux, Android, iOS
