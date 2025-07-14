@@ -17,3 +17,34 @@
 | **Loss Function** | 예측값과 정답값의 차이를 계산하는 함수 |
 | **Backpropagation** | 손실을 기반으로 가중치를 업데이트하는 과정 |
 | **Optimizer** | 손실을 최소화하기 위해 파라미터를 조정하는 알고리즘 |
+
+
+# CNN(Convolutional Neural Network) 설명
+## CNN(Convolutional Neural Network, 합성곱 신경망)은 이미지나 영상, 시계열 데이터와 같은 2차원 또는 3차원 데이터 처리에 특화된 딥러닝 모델입니다. 컴퓨터 비전 분야에서 매우 널리 사용되며, 특히 이미지 분류, 객체 탐지, 얼굴 인식, 자율주행 등에서 강력한 성능을 보입니다.
+
+### 1단계: 이미지 업로드 및 색상값 추출
+<img width="1626" height="689" alt="image" src="https://github.com/user-attachments/assets/fe65b07a-8a24-498a-abd2-d1a012a4a31b" />
+
+### 2단계: 수직 엣지 감지 필터
+<img width="1626" height="688" alt="image" src="https://github.com/user-attachments/assets/dd41a753-9e56-4ae4-938a-db77a67f10dc" />
+
+### 3단계: 수평 엣지 감지 필터
+<img width="1622" height="687" alt="image" src="https://github.com/user-attachments/assets/6ed75a14-4366-4778-82b3-f57905d2c3ba" />
+
+### 4단계: 블러 필터
+<img width="1622" height="686" alt="image" src="https://github.com/user-attachments/assets/e83662d4-3050-46c0-8196-db4eaed5bd98" />
+
+### 5단계: 샤프닝 필터
+<img width="1623" height="691" alt="image" src="https://github.com/user-attachments/assets/36bfb6f4-9f39-4bd8-8aeb-9308c17ce381" />
+
+### 최종 결과:
+<img width="1619" height="505" alt="image" src="https://github.com/user-attachments/assets/2230e226-bb70-42a4-a56a-704e9e5c3e9a" />
+
+
+
+
+
+
+
+
+
