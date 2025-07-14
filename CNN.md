@@ -42,6 +42,95 @@
 ### 최종 결과:
 <img width="1619" height="505" alt="image" src="https://github.com/user-attachments/assets/2230e226-bb70-42a4-a56a-704e9e5c3e9a" />
 
+## 1️⃣ 입력 (Input)
+
+- **예시**: `28x28` 흑백 이미지 or `224x224x3` 컬러 이미지
+- **목적**: 모델이 처리할 수 있는 형식으로 이미지 입력
+
+---
+
+## 2️⃣ 전처리 (Preprocessing)
+
+- **정규화 (Normalization)**: 픽셀 값을 0~1로 조정 (`x / 255.0`)
+- **크기 조정 (Resize)**: 모델에 맞는 이미지 크기로 조정 (예: `224x224`)
+- **데이터 증강 (Augmentation)**: 학습 데이터 다양성을 위한 회전, 뒤집기 등 (훈련 시에만)
+
+---
+
+## 3️⃣ 합성곱 계층 (Convolution Layer)
+
+- **역할**: 필터(kernel)를 사용하여 이미지에서 특징 추출
+- **출력**: Feature Map (특징 맵)
+- **하이퍼파라미터**: 필터 수, 커널 크기, stride, padding
+
+---
+
+## 4️⃣ 활성화 함수 (ReLU)
+
+- **역할**: 비선형성 도입
+- **ReLU**: `f(x) = max(0, x)`
+- **이유**: 신경망이 더 복잡한 표현을 학습 가능하게 함
+
+---
+
+## 5️⃣ 풀링 계층 (Pooling Layer)
+
+- **Max Pooling**: 일정 영역 내 최대값만 추출
+- **Average Pooling**: 평균값 추출
+- **목적**:
+  - 공간적 크기 감소 (연산량 줄이기)
+  - 과적합 방지
+  - 특징 추출 강화
+
+---
+
+## 6️⃣ 계층 반복 (Convolution + Pooling 반복)
+
+- 여러 층을 반복적으로 쌓아
+  - **저수준 특징** (모서리, 선 등) → **고수준 특징** (눈, 얼굴 등) 추출
+- **깊이가 깊어질수록 더 복잡한 특징 학습**
+
+---
+
+## 7️⃣ 플래튼 (Flatten Layer)
+
+- 2D Feature Map을 1D 벡터로 변환
+- **Fully Connected Layer**로 입력되기 위해 필요
+
+---
+
+## 8️⃣ 완전 연결 계층 (Fully Connected Layer)
+
+- 일반적인 인공신경망 구조
+- 모든 노드가 연결됨
+- 최종 분류/회귀 결과를 출력
+
+---
+
+## 9️⃣ 출력 (Output Layer)
+
+- **Softmax 함수**: 다중 클래스 분류 시 사용
+- **Sigmoid 함수**: 이진 분류
+- 출력은 클래스별 확률 값으로 표현됨
+
+---
+
+## 🖼️ 시각화 예시
+
+![cnn-pipeline](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*XizfU1KjvM3YZodL4jFqaw.png)
+
+## 🏁 요약
+
+| 단계 | 설명 |
+|------|------|
+| 입력 | 이미지 데이터 입력 |
+| 전처리 | 정규화, 리사이징, 증강 |
+| Convolution | 특징 추출 |
+| ReLU | 비선형성 추가 |
+| Pooling | 공간 축소, 특징 강화 |
+| Flatten | FC 계층을 위한 1D 변환 |
+| FC Layer | 분류 결정 |
+| 출력 | Softmax로 클래스 예측 |
 
 
 
