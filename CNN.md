@@ -18,6 +18,8 @@
 | **Backpropagation** | 손실을 기반으로 가중치를 업데이트하는 과정 |
 | **Optimizer** | 손실을 최소화하기 위해 파라미터를 조정하는 알고리즘 |
 
+![CNN 구조](https://upload.wikimedia.org/wikipedia/commons/6/63/Typical_cnn.png)
+
 
 # CNN(Convolutional Neural Network) 설명
 ## CNN(Convolutional Neural Network, 합성곱 신경망)은 이미지나 영상, 시계열 데이터와 같은 2차원 또는 3차원 데이터 처리에 특화된 딥러닝 모델입니다. 컴퓨터 비전 분야에서 매우 널리 사용되며, 특히 이미지 분류, 객체 탐지, 얼굴 인식, 자율주행 등에서 강력한 성능을 보입니다.
