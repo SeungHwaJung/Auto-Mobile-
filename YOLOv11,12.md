@@ -67,9 +67,8 @@
 
 ## 📈 성능 그래프
 
-![YOLO Benchmark](./benchmark/yolo_benchmark_graph.png)
-
-> `./benchmark/yolo_benchmark_graph.png` 위치에 위에서 생성한 성능 그래프 이미지를 업로드하세요.
+![YOLO Benchmark](<img width="895" height="336" alt="bench" src="https://github.com/user-attachments/assets/902562a1-0089-4c6a-9994-8898d013cb5a" />
+)
 
 ---
 
@@ -78,3 +77,10 @@
 - ✅ **YOLOv11 (YOLO-NAS)**: 정확도와 속도, 모델 경량화를 모두 달성한 최적 객체 탐지 모델
 - 🧠 **YOLOv12 (YOLO-World)**: 정확도는 유사하지만 **Open Vocabulary 탐지**가 가능한 유연한 멀티모달 모델
 - ⚖️ **YOLOv8**: 기본 YOLO의 균형 잡힌 성능 제공
+
+## 🔚 결론
+
+| 모델 | 한 줄 요약 |
+|------|-------------|
+| YOLOv11 | YOLOv8을 NAS로 강화한 고성능 실시간 탐지기 |
+| YOLOv12 | YOLO를 넘은 텍스트 기반 멀티모달 탐지기 |
