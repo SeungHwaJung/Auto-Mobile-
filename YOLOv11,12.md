@@ -67,7 +67,7 @@
 
 ## 📈 성능 그래프
 
-![YOLO Benchmark](<img width="895" height="336" alt="bench" src="https://github.com/user-attachments/assets/902562a1-0089-4c6a-9994-8898d013cb5a" />
+![YOLO Benchmark](<img width="895" height="336" alt="bench" src="https://github.com/user-attachments/assets/97257a92-ab0f-44b3-8e46-8448c5ab207f" />
 )
 
 ---
