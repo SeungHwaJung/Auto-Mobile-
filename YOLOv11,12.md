@@ -1,24 +1,54 @@
-## 📊 비교 표
-
-| 항목                      | YOLOv11 (YOLO-NAS 기반)                        | YOLOv12 (YOLO-World 기반)                      |
-|---------------------------|-----------------------------------------------|-----------------------------------------------|
-| 🧠 주요 특징              | NAS 기반 최적화<br>실시간 성능 개선             | 멀티모달 처리<br>Open Vocabulary 탐지 지원     |
-| 📦 백본 (Backbone)        | NASNet, EfficientNet 변형                      | CLIP Vision Transformer 등                    |
-| 🧰 입력 형식              | 이미지 단독 입력                               | 이미지 + 텍스트 (멀티모달)                    |
-| 📚 학습 방식              | 지도학습 (Supervised Learning)                 | Zero-shot / Few-shot                         |
-| ⚙️ 탐지 특징              | 고정 클래스 탐지                              | 클래스 이름 없이 탐지 가능 (텍스트 설명 기반) |
-| 🛠️ 적용 분야              | CCTV, 자율주행, 드론                           | 검색 시스템, 유튜브 분석, AI 비서              |
-| ⚡ 라이브러리 / 프레임워크 | `ultralytics`, `super-gradients`              | `GroundingDINO`, `CLIP`, `SAM`                |
-| 📎 대표 프로젝트          | [YOLO-NAS](https://github.com/Deci-AI/super-gradients) | [YOLO-World](https://github.com/tencent-ailab/yolo-world) |
+| 버전 | 요약 설명 |
+|------|------------|
+| **YOLOv11** | 기존 YOLO를 NAS(Neural Architecture Search) 기술로 최적화한 고속·고정밀 객체 탐지 모델. 주로 `YOLO-NAS`로 불림. |
+| **YOLOv12** | 텍스트로 객체를 탐지하는 멀티모달 모델. 기존 YOLO의 구조를 넘어서 Open Vocabulary 탐지를 수행. `YOLO-World`, `GroundingDINO`, `CLIP` 등이 기반. |
 
 ---
 
-## 🧩 개념 요약
+## 🧠 YOLOv11 (YOLO-NAS 기반)
 
-| 용어             | 설명 |
-|------------------|------|
-| **YOLO**         | You Only Look Once – 빠른 객체 탐지 모델 |
-| **NAS**          | Neural Architecture Search – 최적 모델 구조 자동 탐색 |
-| **멀티모달**      | 이미지 + 텍스트처럼 다양한 입력 통합 분석 |
-| **Zero-shot**    | 새로운 객체를 학습 없이 탐지하는 방식 |
-| **Open Vocabulary** | 클래스가 사전 정의되지 않아도 탐지 가능 |
+- **공식 YOLO는 아니며, YOLO-NAS로 대표됨**
+- NAS 기반으로 YOLO 구조를 자동 최적화
+- `super-gradients` 라이브러리를 통해 사용 가능
+
+### 🔧 핵심 기술
+- Neural Architecture Search (NAS)
+- 경량화된 구조: YOLO-NAS-S / M / L
+- 기존 YOLOv8 대비 **정확도 + 속도 향상**
+
+### 💡 주요 특징
+- 실시간 객체 탐지에 적합
+- 높은 FPS와 정확도를 동시에 달성
+- COCO 벤치마크에서 SOTA급 성능
+
+---
+
+## 🧠 YOLOv12 (YOLO-World / GroundingDINO 기반)
+
+- **YOLOv12는 멀티모달 객체 탐지 모델**
+- 기존 YOLO와 달리 **텍스트 기반 객체 탐지** 가능
+- 사전에 학습하지 않은 클래스도 탐지 (Open Vocabulary)
+
+### 🔧 핵심 기술
+- CLIP (이미지-텍스트 임베딩)
+- GroundingDINO (텍스트 기반 객체 탐지)
+- Segment Anything (픽셀 단위 분할)
+- YOLO-World (Tencent)
+
+### 💡 주요 특징
+- "red car", "police officer" 등 텍스트로 탐지 가능
+- Zero-shot / Few-shot 탐지 가능
+- 검색, 보안 분석, 영상 요약 등 고차원 응용 가능
+
+---
+
+## 📊 YOLOv11 vs YOLOv12 비교표
+
+| 항목               | YOLOv11 (YOLO-NAS)                     | YOLOv12 (YOLO-World 등)                     |
+|--------------------|----------------------------------------|---------------------------------------------|
+| 구조 기반           | YOLOv8 확장 + NAS 최적화               | CLIP + Transformer + SAM 등 복합 구조       |
+| 주요 특징           | 빠름 + 정확함 + 경량화                 | 텍스트 기반 탐지 + Open Vocabulary 지원     |
+| 입력 방식           | 이미지 단독                           | 이미지 + 텍스트 (멀티모달)                  |
+| 클래스 인식 방식     | 고정 클래스 탐지 (학습된 것만)         | 프롬프트 기반 객체 탐지 (학습 안 해도 탐지) |
+| 활용 예시           | CCTV, 자율주행, 드론 등               | 영상 검색, 설명, AI 비서, 유튜브 분석 등    |
+| 실행 라이브러리     | `super-gradients`                     | `GroundingDINO`, `CLIP`, `SAM` 등           |
